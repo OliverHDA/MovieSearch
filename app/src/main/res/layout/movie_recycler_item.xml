@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="@dimen/card_view_width"
+    android:layout_height="270dp"
+    android:layout_margin="@dimen/margin"
+    app:cardCornerRadius="@dimen/card_view_corner_radius"
+    app:cardElevation="@dimen/card_view_elevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/movie_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageViewMovie"
+            android:layout_width="match_parent"
+            android:layout_height="@+id/textViewMovieName"
+            android:contentDescription="@string/poster_description"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/textViewMovieName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_no_photo_vector" />
+
+        <TextView
+            android:id="@+id/textViewMovieName"
+            android:layout_width="@dimen/card_view_width"
+            android:layout_height="@dimen/movie_name_view_recycler_height"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:background="@color/orange"
+            android:text="@string/movie_name"
+            android:textSize="@dimen/movie_card_title_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/textViewReleaseYear"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewReleaseYear"
+            android:layout_width="@dimen/card_view_width"
+            android:layout_height="@dimen/movie_info_view_recycler_height"
+            android:background="@color/orange"
+            android:text="@string/release_year"
+            android:textSize="@dimen/movie_card_year_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewRating"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/movie_card_title_text_size"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/rating"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/loadingMovieDetailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="movie_detail_pic_height">400dp</dimen>
+    <dimen name="margin">15dp</dimen>
+    <dimen name="detail_fragment_movie_title">25sp</dimen>
+    <dimen name="card_view_margin">10dp</dimen>
+    <dimen name="card_view_corner_radius">10dp</dimen>
+    <dimen name="card_view_elevation">3dp</dimen>
+    <dimen name="card_view_width">140dp</dimen>
+    <dimen name="card_view_height">320dp</dimen>
+    <dimen name="movie_name_view_recycler_height">40dp</dimen>
+    <dimen name="movie_card_title_text_size">16sp</dimen>
+    <dimen name="movie_info_view_recycler_height">20dp</dimen>
+    <dimen name="movie_card_year_text_size">12sp</dimen>
+</resources>
